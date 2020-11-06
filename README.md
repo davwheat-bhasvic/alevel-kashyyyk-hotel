@@ -13,8 +13,6 @@ The program should work in a loop so any guest can access the system during thei
 ## Contents <!-- omit in toc -->
 
 - [Requirements](#requirements)
-  - [Preface](#preface)
-  - [Code](#code)
     - [Check in](#check-in)
     - [Book a table](#book-a-table)
     - [Check out](#check-out)
@@ -22,12 +20,10 @@ The program should work in a loop so any guest can access the system during thei
 
 ## Requirements
 
-### Preface
-
 - You are to work in a group to plan, design and code the system described below.
 - You should divide up the program so that each person in your team writes C subroutines that will be put together into one overall program.
 
-### Code
+---
 
 The user should be presented with 4 options:
 
@@ -36,7 +32,7 @@ The user should be presented with 4 options:
 - book a table
 - quit
 
-#### Check in
+### Check in
 
 - Your program should read in and store:
   - The surname of the main user and their date of birth (DD/MM/YY)
@@ -54,7 +50,7 @@ The user should be presented with 4 options:
 - Once they have completed check in and been assigned accommodation, the booking is given a BookingID. This ID should be made up of their surname plus a random number. This ID must be used to book meals in the dining room.
 - All of the above information will be used to create the hotel invoice (bill) at the end of their stay.
 
-#### Book a table
+### Book a table
 
 There are 3 dining tables: **Endor**, **Naboo** and **Tatooine**. Each seat up to 4 people. 
 
@@ -65,7 +61,7 @@ There are 3 dining tables: **Endor**, **Naboo** and **Tatooine**. Each seat up t
 - It should then ask the user to input which table & time they want to book.
 - It should give the user a message saying their table is booked and update the tables available in that area for that sitting time & day.
 
-#### Check out
+### Check out
 
 - When the customer chooses to check out, your program should calculate and display their final bill.
 - Your program will need to use the customer data to calculate:
@@ -80,6 +76,6 @@ There are 3 dining tables: **Endor**, **Naboo** and **Tatooine**. Each seat up t
   - An overall bill total for the stay
 - Once someone has checked out, their accommodation should be available to use for other guests
 
-#### Quit
+### Quit
 
 This isn’t really quitting at all – it should allow the user to end their use of the interface and return them to the main menu BUT not end the whole program so data is not lost (So you can test all of the above properly
