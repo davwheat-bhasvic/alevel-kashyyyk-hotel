@@ -37,7 +37,7 @@ The user should be presented with 4 options:
 - Your program should read in and store:
   - The surname of the main user and their date of birth (DD/MM/YY)
   - The number of guests staying in the hotel – including how many are adults and how many are children (16 or below)
-  - The board type – FB (full board), HB (half board) or BB (Bed &breakfast)
+  - The board type – FB (full board), HB (half board) or BB (bed & breakfast)
   - The length of their stay (in whole days)
   - Whether they want a daily wake-up call or not
 - It should give them a choice of the available rooms and display the prices of each room so that the user can make their choice.
