@@ -12,11 +12,22 @@ The program should work in a loop so any guest can access the system during thei
 
 ## Contents <!-- omit in toc -->
 
+- [Other information](#other-information)
 - [Requirements](#requirements)
-    - [Check in](#check-in)
-    - [Book a table](#book-a-table)
-    - [Check out](#check-out)
-    - [Quit](#quit)
+  - [Check in](#check-in)
+  - [Book a table](#book-a-table)
+  - [Check out](#check-out)
+  - [Quit](#quit)
+
+## Other information
+
+**All source code is stored inside the `src` directory.** All files outside this folder are not needed to run the program.
+
+All code-editing commits **must** be formatted by running `format.bat` in the repo root.
+
+There are some other documentation related to how our specific implementation of this brief will be created:
+
+- [Data dictionary](data-dictionary.md)
 
 ## Requirements
 
