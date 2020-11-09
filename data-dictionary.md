@@ -67,7 +67,7 @@ Since we know that the board type can only be one of 3 options, we can use stati
 #define BedAndBreakfast 2
 ```
 
-Using these hash-defines prevents confusion as we can now use `booking.board == Board.FullBoard` as opposed to `booking.board == 0`. We're less likely to mix-up what 0, 1 and 2 are.
+Using these hash-defines prevents confusion as we can now use `booking.board == FullBoard` as opposed to `booking.board == 0`. We're less likely to mix-up what 0, 1 and 2 are.
 
 ## Pricing
 
