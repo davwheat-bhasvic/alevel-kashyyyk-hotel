@@ -88,3 +88,5 @@ We can then access these anywhere in the program with...
 RoomPrices[2]; // room 2 price
 BoardPrices[FullBoard]; // full board price
 ```
+
+These arrays are `const`, meaning they're constants and do not change. We don't want to accidentally change the price of a room somehow!
