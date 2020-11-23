@@ -2,7 +2,6 @@
 // Created by dwhea on 20/11/2020.
 //
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "globals.h"
 
@@ -15,15 +14,22 @@ void CheckOut() {
   printf("\n\nCHECK OUT\n");
   printf("Enter booking ID: ");
 
-  char bookingId[66] = {'\0'};
-  gets_s(bookingId, 66);
+  char bookingId[66] = "";
+  scanf("%s", &bookingId);
   fflush(stdin);
 
   const int BookingIndex = FindBookingIndex(bookingId);
+
+  if (BookingIndex == -1) {
+    // invalid booking ID
+    printf("\nInvalid booking ID. Please contact a staff member.\n\n");
+    return;
+  }
+
   int Price = CalculatePrice(BookingIndex);
 
-  printf("Index: %d", BookingIndex);
-  printf("Price per day: GBP %d", Price);
+  printf("\n\nIndex: %d", BookingIndex);
+  printf("\nPrice per day: GBP %d", Price);
 }
 
 int CalculatePrice(int index) {
