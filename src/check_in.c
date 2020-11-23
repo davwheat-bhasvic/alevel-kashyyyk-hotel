@@ -166,7 +166,7 @@ void BookingRoom() {
     case 2:
       ThisBookingRooms[2] = true;
       break;
-    case 3:;
+    case 3:
       ThisBookingRooms[3] = true;
       break;
     case 4:
