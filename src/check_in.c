@@ -186,7 +186,7 @@ void surname() {
   // Asks for users surname
   printf("What is your surname?\n");
   // Assigns users surname
-  scanf("%s", &ThisBookingSurname);
+  scanf("%s", ThisBookingSurname);
 }
 
 void DOB() {
@@ -194,7 +194,7 @@ void DOB() {
   printf("What is your date of birth?\n");
   printf("Format: YYYY-MM-DD\n");
   // Assigns users DOB
-  scanf("%s", &ThisBookingDateOfBirth);
+  scanf("%s", ThisBookingDateOfBirth);
 }
 
 void Guests() {

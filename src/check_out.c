@@ -15,7 +15,7 @@ void CheckOut() {
   printf("Enter booking ID: ");
 
   char bookingId[66] = "";
-  scanf("%s", &bookingId);
+  scanf("%s", bookingId);
   fflush(stdin);
 
   const int BookingIndex = FindBookingIndex(bookingId);
