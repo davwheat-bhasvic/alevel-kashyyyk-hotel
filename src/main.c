@@ -1,15 +1,47 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#include "header.h"
+#include "check_in.h"
+#include "check_out.h"
+#include "globals.h"
 
 int main() {
-  printf("%d\n", RoomPrices[2]);           // price of room 2
-  printf("%d\n", BoardPrices[FullBoard]);  // price of FullBoard
+  setbuf(stdout, NULL);
 
-  strcpy(BookingIDs[0], "Wheatley49");
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
+  while (true) {
+    puts("Choose an option");
+    puts("1. Check in");
+    puts("2. Check out");
+    puts("3. Book dinner table");
+    puts("4. Exit");
 
-  printf(BookingIDs[0]);
+    int option = 0;
+    printf("$ ");
+    scanf_s("%d", &option);
+
+    switch (option) {
+      case 1:
+        CheckIn();
+        break;
+
+      case 2:
+        CheckOut();
+        break;
+        //        break;
+      case 3:
+        //        break;
+
+      default:
+      case 4:
+        // we just want to loop back to start
+        printf("\n\n\n\n\n\n\n\n");
+        break;
+    }
+  }
+#pragma clang diagnostic pop
 
   return 0;
 }
