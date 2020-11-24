@@ -1,6 +1,3 @@
-//
-// Created by dwhea on 20/11/2020.
-//
 #include <stdio.h>
 #include <string.h>
 #include "globals.h"

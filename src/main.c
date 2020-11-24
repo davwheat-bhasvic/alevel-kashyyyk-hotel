@@ -42,6 +42,4 @@ int main() {
     }
   }
 #pragma clang diagnostic pop
-
-  return 0;
 }
