@@ -14,7 +14,7 @@ void BookTableFor7(int index);
 void BookTableFor9(int index);
 
 void BookTable() {
-  printf("\n\nCHECK OUT\n");
+  printf("\n\nBOOK DINNER TABLE\n");
   printf("Enter booking ID: ");
 
   char bookingId[66] = "";
