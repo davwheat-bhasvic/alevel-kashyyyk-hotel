@@ -6,6 +6,7 @@
 #define KASHYYYK_HOTEL_GLOBALS_H 1
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ROOM_CAPACITY(room) (room <= 3 ? 4 : 2)
 
 #define true 1
 #define false 0
@@ -58,5 +59,6 @@ extern char TableBookings9[3][66];
 
 // Find the index of a booking by its booking ID, or -1 if not found
 int FindBookingIndex(char bookingID[66]);
+void EmptyStdin();
 
 #endif  // KASHYYYK_HOTEL_GLOBALS_H

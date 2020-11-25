@@ -2,6 +2,7 @@
 // Created by dwhea on 20/11/2020.
 //
 #include "globals.h"
+#include <stdio.h>
 #include <string.h>
 
 const int RoomPrices[7] = {-1, 100, 100, 85, 75, 75, 50};
@@ -25,10 +26,18 @@ char TableBookings9[3][66] = {""};
 
 int FindBookingIndex(char bookingID[66]) {
   for (int i = 0; i < MAX_BOOKINGS; i++) {
-    if (strcmp(BookingIDs[i], bookingID) == 0) {
+    if (_stricmp(BookingIDs[i], bookingID) == 0) {
       return i;
     }
   }
 
   return invalid;
+}
+
+void EmptyStdin() /* simple helper-function to empty stdin */
+{
+  int c = getchar();
+
+  while (c != '\n' && c != EOF)
+    c = getchar();
 }
