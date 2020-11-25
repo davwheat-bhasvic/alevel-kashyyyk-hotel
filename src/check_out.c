@@ -30,10 +30,13 @@ void CheckOut() {
   for (int i = 0; i < 6; i++) {
     // free up rooms
     if (BookingRooms[BookingIndex][i] == true) {
-      printf("Freed up Room #%d", i + 1);
-      RoomsBooked[i] = false;
+      printf("Freed up Room #%d\n\n", i + 1);
+      RoomsBooked[i + 1] = false;
     }
   }
+
+  // Delete booking from system
+  strcpy_s(BookingIDs[BookingIndex], 66, "");
 }
 
 double CalculatePrice(int index) {
