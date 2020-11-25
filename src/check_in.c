@@ -4,8 +4,8 @@
 #include <time.h>
 #include "globals.h"
 
-// Gets surname
-void surname();
+// Gets Surname
+void Surname();
 
 // Gets date of birth
 void DOB();
@@ -20,12 +20,12 @@ void Board();
 void Length();
 
 // Asks if daily wake up is wanted
-void wakeup();
+void WakeUp();
 
 // Books the rooms
 void BookingRoom();
 
-// Using surname and random number creates a Booking ID
+// Using Surname and random number creates a Booking ID
 void BookingID();
 
 void SaveThisBooking();
@@ -102,15 +102,15 @@ void SaveThisBooking() {
 void CheckIn() {
   srand(time(NULL));
 
-  surname();
+  Surname();
   DOB();
   Guests();
   Board();
   Length();
-  wakeup();
+  WakeUp();
 
   BookingRoom();
-  // create int counter that = 0
+
   int counter = 0;
   // Forever loop
   while (true) {
@@ -182,10 +182,10 @@ void BookingRoom() {
   }
 }
 
-void surname() {
-  // Asks for users surname
-  printf("What is your surname?\n");
-  // Assigns users surname
+void Surname() {
+  // Asks for users Surname
+  printf("What is your Surname?\n");
+  // Assigns users Surname
   scanf("%s", ThisBookingSurname);
 }
 
@@ -236,7 +236,7 @@ void Length() {
   scanf_s("%d", &ThisBookingLength);
 }
 
-void wakeup() {
+void WakeUp() {
   int validEntries = 0;
 
   // loop until we get a valid entry
@@ -270,6 +270,6 @@ void BookingID() {
   // Creates a random number between 1 and 99 incl.
   int RandomNum = (rand() % 99) + 1;
 
-  // create booking ID with surname and 2 random numbers
+  // create booking ID with Surname and 2 random numbers
   sprintf(ThisBookingID, "%s%02d", ThisBookingSurname, RandomNum);
 }
