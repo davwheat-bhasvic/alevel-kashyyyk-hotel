@@ -237,25 +237,32 @@ void Length() {
 }
 
 void wakeup() {
-  // Asks if wake up call is wanted
-  printf("Do you want a daily wake up call?\n");
-  printf("\t1)Yes\t2)No\n");
+  int validEntries = 0;
 
-  // Assigns value depending on option
-  scanf_s("%d", &ThisBookingWakeUpCalls);
-  fflush(stdin);
+  // loop until we get a valid entry
+  while (validEntries != 1 || ThisBookingWakeUpCalls == invalid) {
+    // Asks if wake up call is wanted
+    printf("Do you want a daily wake up call?\n");
+    printf("\t1)Yes\t2)No\n");
 
-  // Goes through case to set 0 if no and 1 if yes
-  // Defaults to 0 if invalid
-  switch (ThisBookingWakeUpCalls) {
-    default:
-    case 2:
-      ThisBookingWakeUpCalls = 0;
-      break;
+    // Assigns value depending on option
+    validEntries = scanf_s("%d", &ThisBookingWakeUpCalls);
+    fflush(stdin);
 
-    case 1:
-      ThisBookingWakeUpCalls = 1;
-      break;
+    // Goes through case to set 0 if no and 1 if yes
+    // Defaults to 0 if invalid
+    switch (ThisBookingWakeUpCalls) {
+      default:
+        ThisBookingWakeUpCalls = invalid;
+
+      case 2:
+        ThisBookingWakeUpCalls = false;
+        break;
+
+      case 1:
+        ThisBookingWakeUpCalls = true;
+        break;
+    }
   }
 }
 

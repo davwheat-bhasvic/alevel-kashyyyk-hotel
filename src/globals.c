@@ -2,6 +2,7 @@
 // Created by dwhea on 20/11/2020.
 //
 #include "globals.h"
+#include <string.h>
 
 const int RoomPrices[7] = {-1, 100, 100, 85, 75, 75, 50};
 const int RoomCapacities[7] = {-1, 4, 4, 4, 2, 2, 2};
@@ -21,3 +22,13 @@ int RoomsBooked[7] = {-1, false};
 
 char TableBookings7[3][66] = {""};
 char TableBookings9[3][66] = {""};
+
+int FindBookingIndex(char bookingID[66]) {
+  for (int i = 0; i < MAX_BOOKINGS; i++) {
+    if (strcmp(BookingIDs[i], bookingID) == 0) {
+      return i;
+    }
+  }
+
+  return invalid;
+}

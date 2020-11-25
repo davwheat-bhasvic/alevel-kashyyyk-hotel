@@ -9,6 +9,7 @@
 
 #define true 1
 #define false 0
+#define invalid -1
 
 #define IS_DEBUG_MODE true
 
@@ -19,6 +20,10 @@
 extern const int RoomPrices[7];
 extern const int RoomCapacities[7];
 extern const int BoardPrices[3];
+#define WAKE_UP_CALL_PRICE 5
+
+#define CONCESSION_DISCOUNT 0.9
+#define CHILD_BOARD_DISCOUNT 0.5
 
 // ---------------------
 // BOOKING DATA
@@ -44,5 +49,14 @@ extern int RoomsBooked[7];
 
 extern char TableBookings7[3][66];
 extern char TableBookings9[3][66];
+
+#define TABLE_ENDOR 0
+#define TABLE_NABOO 1
+#define TABLE_TATOOINE 2
+
+#define TABLE_CAPACITY 4
+
+// Find the index of a booking by its booking ID, or -1 if not found
+int FindBookingIndex(char bookingID[66]);
 
 #endif  // KASHYYYK_HOTEL_GLOBALS_H

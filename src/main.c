@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
+#include "book_table.h"
 #include "check_in.h"
 #include "check_out.h"
 #include "globals.h"
@@ -30,9 +29,9 @@ int main() {
       case 2:
         CheckOut();
         break;
-        //        break;
       case 3:
-        //        break;
+        BookTable();
+        break;
 
       default:
       case 4:
