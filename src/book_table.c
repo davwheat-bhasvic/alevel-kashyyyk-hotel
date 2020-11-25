@@ -107,6 +107,8 @@ void BookTable() {
 
     printf("Choose a time:");
     int entries = scanf("%d", &input);
+    EmptyStdin();
+    fflush(stdin);
 
     if (entries == 0 || entries > 1) {
       input = invalid;
@@ -161,6 +163,7 @@ void BookTableFor7(int index) {
 
     printf("\nChoose table:");
     scanf("%d", &tableChoice);
+    EmptyStdin();
     fflush(stdin);
 
     switch (tableChoice) {
@@ -230,6 +233,7 @@ void BookTableFor9(int index) {
 
     printf("\nChoose table:");
     scanf("%d", &tableChoice);
+    EmptyStdin();
     fflush(stdin);
 
     switch (tableChoice) {
