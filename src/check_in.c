@@ -101,13 +101,15 @@ void SaveThisBooking() {
       ThisBookingWakeUpCalls = invalid;
       RoomNum = 0;
 
+      EmptyStdin();
+
       // stop searching for an empty slot after we found one
       break;
     }
   }
 
   if (foundSlot != true) {
-    // THIS IS BAD!
+    // NO ROOM AT THE INN!
     exit(-1);
   }
 }

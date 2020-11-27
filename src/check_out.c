@@ -14,11 +14,10 @@ void CheckOut() {
   printf("Enter booking ID: ");
 
   // workaround for using fgets after a scanf (consumes new line)
-  while ((getchar()) != '\n')
-    ;
+  EmptyStdin();
 
   char bookingId[66] = "";
-  scanf("%63[A-Za-z0-9]c\n", bookingId);
+  scanf("%65[A-Za-z0-9]c\n", bookingId);
   fflush(stdin);
 
   const int BookingIndex = FindBookingIndex(bookingId);
@@ -26,6 +25,8 @@ void CheckOut() {
   if (BookingIndex == invalid) {
     // invalid booking ID
     printf("\nInvalid booking ID. Please contact a staff member.\n\n");
+
+    EmptyStdin();
     return;
   }
 
@@ -41,6 +42,8 @@ void CheckOut() {
 
   // Delete booking from system
   strcpy_s(BookingIDs[BookingIndex], 66, "");
+
+  EmptyStdin();
 }
 
 double CalculatePrice(int index) {
