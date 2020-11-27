@@ -13,8 +13,12 @@ void CheckOut() {
   printf("\n\nCHECK OUT\n");
   printf("Enter booking ID: ");
 
+  // workaround for using fgets after a scanf (consumes new line)
+  while ((getchar()) != '\n')
+    ;
+
   char bookingId[66] = "";
-  scanf("%s", bookingId);
+  scanf("%63[A-Za-z0-9]c\n", bookingId);
   fflush(stdin);
 
   const int BookingIndex = FindBookingIndex(bookingId);
