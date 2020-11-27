@@ -16,10 +16,22 @@ int main() {
     puts("2. Check out");
     puts("3. Book dinner table");
     puts("4. Exit");
-
-    int option = 0;
     printf("$ ");
-    scanf_s("%d", &option);
+
+    // using fgets with sscanf_s prevents infinite loop when invalid
+    // entry is supplied
+    char input[2] = {0};
+    int option = 0;
+    fgets(input, 2, stdin);
+    int valid = sscanf_s(input, "%d", &option);
+    fflush(stdin);
+
+    if (valid != 1) {
+      printf("\n\n\n\n\n\n\n\n");
+      continue;
+    }
+
+    printf("\n");
 
     switch (option) {
       case 1:
