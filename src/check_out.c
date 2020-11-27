@@ -98,6 +98,7 @@ double CalculatePrice(int index) {
   printf("\n\n");
   printf("===============================\n");
   printf("         R E C E I P T         \n\n");
+  printf("Booking ID: %s\n\n", BookingIDs[index]);
   printf("Room price        GBP %.2f\n", AllRoomCost * StayLength);
   printf("Board cost        GBP %.2f\n", BoardCost * StayLength);
 
