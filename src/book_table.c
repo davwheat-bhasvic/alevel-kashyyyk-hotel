@@ -148,7 +148,7 @@ void BookTableFor7(int index) {
   char BookingID[66] = "";
   strcpy(BookingID, BookingIDs[index]);
 
-  while (tableChoice == invalid && GuestsRemainingToSeat > 0) {
+  while (tableChoice == invalid || GuestsRemainingToSeat > 0) {
     printf("You have %d guests not booked at a table.\n\n", GuestsRemainingToSeat);
 
     if (EndoorAvailable) {
